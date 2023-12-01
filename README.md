@@ -14,8 +14,6 @@ npm i
 
 ## Features
 
-[Watch video here](https://youtu.be/sUKptmUVIBM)
-
 - Latest Next.js 13 features
 - Next.js App Router
 - Next.js Server Actions
