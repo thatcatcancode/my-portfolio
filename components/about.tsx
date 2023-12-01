@@ -19,30 +19,28 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        <span className="italic">I started programming in 2006</span> as a creative outlet for telling stories in a new medium.
+        It was before JavaScript frameworks and "frontend" positions existed.
+        As an ungrad, I rebuilt my college's science library portal & interned at the Digital Library Center.
+        Upon graduating from the University of Florida with a degree in English Literature,
+        I landed my first professional job as an application developer.
+        During this time, I formalized my tech knowledge, earning a Master of Science
+        from FIT's College of Engineering.
       </p>
-
+      <p className="mb-3">
+      <span className="italic">Since then</span>, I've worked across various industries and tech stacks,
+        solving interesting problems and making lifelong friends along the way.
+        My favorite part of programming is going up against Goliath problems
+        that stare you down and make you question your ability.
+        There is nothing more satisfying than solving the gnarliest of problems,
+        looking back at it in your rearview mirror and thinking "that was easy",
+        as you zoom away to slay your next giant.
+      </p>
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        <span className="italic">When I'm not coding</span>, I'm cherishing time
+        with family, while watching "footie" matches, playing in a lively kickball league,
+        <span className="font-medium">and making improvements to my home</span>. I am currently
+        learning about coral reefs with my daughter.
       </p>
     </motion.section>
   );

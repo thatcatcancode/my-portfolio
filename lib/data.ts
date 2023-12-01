@@ -1,10 +1,11 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { CgAirplane, CgWorkAlt } from "react-icons/cg";
+import { FaNodeJs, FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import floHockeyImg from "@/public/flohockey.png";
+import floWrestlingImg from "@/public/flowrestling.png";
+import inspiratoImg from "@/public/inspirato.png";
+import flightTrackerImg from "@/public/flight-tracker.png";
 
 export const links = [
   {
@@ -35,52 +36,67 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduate Degree from FIT",
+    location: "Denver, CO",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated with a Master of Science after 3 years of part-time studies, while working full time for my first employer.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2012",
   },
   {
-    title: "Front-End Developer",
+    title: "Senior Software Engineer",
+    location: "Melbourne, FL",
+    description:
+      "My first official senior role was at Satcom Direct building full stack aviation software. I LOVED working with geospatial data! I upskilled my leadership skills, even becoming a Software Manager.",
+    icon: React.createElement(CgAirplane),
+    date: "2015 - 2018",
+  },
+  {
+    title: "My Consulting Business",
+    location: "Melbourne, FL",
+    description:
+      "I ran my own consulting business for a few years. My clients ranged from government to hardware startups. I upskilled in React & Node.js!",
+    icon: React.createElement(FaReact),
+    date: "2018-2019",
+  },
+  {
+    title: "Dev Lead",
     location: "Orlando, FL",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Now I'm the cross-team lead for web at FloSports. I've technically led all major initiatives here for the past four years. I upskilled in Performance, Observability & TypeScript.",
+    icon: React.createElement(FaNodeJs),
+    date: "2019 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "FloHockey.tv",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Developed league & teams features so hockey fans have an ESSENTIAL destination to enjoy their favorite sport.",
+    tags: ["Node.js", "SSR", "A/B Test", "Server Driven UI", "Storybook", "TypeScript", "Display Ads", "JavaScript Framework"],
+    imageUrl: floHockeyImg,
   },
   {
-    title: "rmtDev",
+    title: "Consulting in CO",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "I used agile scrum to deliver projects on time to hosting.com, Inspirato, Vail Ski Resorts, and other companies in Denver.",
+    tags: ["Backbone.js", "ASP.NET Web Api", "PCI Compliance", "Agile Scrum", "Payment Processing"],
+    imageUrl: inspiratoImg,
   },
   {
-    title: "Word Analytics",
+    title: "Athlete Profiles",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Built full stack pipeline for ingesting & displaying sport data on newly crafted Wrestling & Juijitsu athlete profiles.",
+    tags: ["Fullstack", "TypeScript", "SEO", "Node.js", "Firestore", "NoSQL", "Storybook", "SSR", "Redis", "CDN", "A/B Test" ],
+    imageUrl: floWrestlingImg,
+  },
+  {
+    title: "Flight Tracker",
+    description:
+      "Developed Flight Tracker, the most feature and data rich application for globally tracking and managing private jets.",
+    tags: ["Geological Mapping", "MapBox", "Leaflet.js", "Angular", "Typescript", "SaaS" ],
+    imageUrl: flightTrackerImg,
   },
 ] as const;
 
@@ -89,19 +105,22 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
-  "React",
-  "Next.js",
   "Node.js",
+  "Angular",
+  "Nest.js",
   "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
+  "Next.js",
+  "React",
   "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "A/B Testing",
+  "Terraform",
+  "Docker",
+  "CI/CD",
+  "Jest",
+  "Cypress",
+  "NoSQL",
+  "Firebase",
+  "API Design",
+  "PHP",
+  "C#",
 ] as const;
