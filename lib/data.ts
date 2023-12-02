@@ -1,11 +1,12 @@
 import React from "react";
 import { CgAirplane, CgWorkAlt } from "react-icons/cg";
-import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaJs, FaMediumM, FaNodeJs, FaPen, FaReact } from "react-icons/fa";
 import { LuBriefcase, LuGraduationCap, LuPartyPopper } from "react-icons/lu";
 import floHockeyImg from "@/public/flohockey.png";
 import floWrestlingImg from "@/public/flowrestling.png";
 import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
+import builtInAtxImg from "@/public/builtinatx.png";
 
 export const links = [
   {
@@ -27,6 +28,10 @@ export const links = [
   {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Articles",
+    hash: "#articles",
   },
   {
     name: "Contact",
@@ -148,3 +153,30 @@ export const skillsData = [
   "PHP",
   "C#",
 ] as const;
+
+export const articleData = [
+  {
+    title: 'Ship More Frequently 🚀',
+    description: 'by Automatically Generating TypeScript Types',
+    url: 'https://medium.com/flosports-engineering/ship-more-frequently-4fa7d543440',
+    imageUrl: 'https://miro.medium.com/v2/resize:fit:600/format:webp/0*dQNljcCyHDUaWocM',
+    icon: React.createElement(FaMediumM),
+    source: 'Medium'
+  },
+  {
+    title: 'Looking to Sharpen Your Full-Stack Skills?',
+    description: 'These 3 Local Developers Share Their Advice.',
+    url: 'https://www.builtinaustin.com/2021/09/01/austin-full-stack-developer-skills',
+    imageUrl: builtInAtxImg,
+    icon: React.createElement(FaPen),
+    source: 'Built in ATX'
+  },
+  {
+    title: 'Simple Reactive Data Streams',
+    description: 'Building Observables with the RxJs Library',
+    url: 'https://engineering.flosports.tv/simple-stream-composition-40e0165a7f6a',
+    imageUrl: 'https://miro.medium.com/v2/resize:fit:600/format:webp/0*U1cmAhQGCDh2hS2t',
+    icon: React.createElement(FaMediumM),
+    source: 'Medium'
+  },
+]
