@@ -4,11 +4,18 @@ Powered by React + Next.js
 
 ## Installation
 
+Requires node version 18+
+
+```
+nvm use 18
+npm i
 
 ```
 
-nvm use 20
-npm i
+## Run Locally 
+
+```
+npm run dev
 
 ```
 
