@@ -25,7 +25,7 @@ export default function About() {
         During this time, I formalized my tech knowledge, earning a graduate degree in engineering from FIT.
       </p>
       <p className="mb-3">
-      <span className="italic">Since then</span>, I've worked across various industries and tech stacks,
+        <span className="italic">Since then</span>, I've worked across various industries and tech stacks,
         solving interesting problems and making lifelong friends along the way.
         My favorite part of programming is going up against Goliath problems
         that stare you down and make you question your ability.
@@ -36,7 +36,7 @@ export default function About() {
       <p>
         <span className="italic">When I'm not coding</span>, I'm cherishing time
         with family, while watching "footie" matches, playing in a lively kickball league,
-        <span className="font-medium">and making improvements to my home</span>. I am currently
+        <span className="font-medium"> and making improvements to my home</span>. I am currently
         learning about coral reefs with my daughter. 🐠
       </p>
     </motion.section>
