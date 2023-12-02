@@ -36,10 +36,10 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "University of Florida",
+    title: "University of Florida 🐊",
     location: "Gainesville, FL",
     description:
-      "Graduated with an English Literature degree. I love linguistics, which is how I discovered programming, which is really just a different syntax for communicating... with computers.",
+      "Graduated with an English Literature degree. I love linguistics, which is how I discovered coding. Programming is really just a different syntax for communicating... except with computers. 🤖",
     icon: React.createElement(LuGraduationCap),
     date: "2003 - 2007",
   },
@@ -47,7 +47,7 @@ export const experiencesData = [
     title: "My First Job",
     location: "Satellite Beach, FL",
     description:
-      "Began my professional journey as an Application Developer on a secret government contract.",
+      "Began my professional journey as an Application Developer on a secret 🤫 government contract.",
     icon: React.createElement(LuPartyPopper),
     date: "2007 - 2012",
   },
@@ -55,7 +55,7 @@ export const experiencesData = [
     title: "Graduate Degree from FIT",
     location: "Denver, CO",
     description:
-      "I graduated with an engineering degree, while working full time for my first employer.",
+      "I earned a graduate degree in engineering, while working full time for my first employer.",
     icon: React.createElement(LuGraduationCap),
     date: "2009 - 2012",
   },

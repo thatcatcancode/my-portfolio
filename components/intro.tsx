@@ -4,9 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrow90DegDown, BsArrow90DegLeft, BsArrowBarDown, BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
+import { BsArrow90DegRight } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import profileImg from "@/public/profile.jpeg";
@@ -87,7 +85,7 @@ export default function Intro() {
           }}
         >
           Contact me here{" "}
-          <BsArrowBarDown className="opacity-70 group-hover:translate-x-1 transition" />
+          <BsArrow90DegRight style={{ transform: 'rotate(90deg)' }} className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
       </motion.div>
     </section>
