@@ -8,7 +8,7 @@ export default function Footer() {
       </small>
       <p className="text-xs">
         Built with React 18 & Next.js 13, TypeScript, Tailwind CSS,
-        Framer Motion, React Email + Resend, & GitHub hosting
+        Framer Motion, & deployed with GitHub Actions.
       </p>
     </footer>
   );
