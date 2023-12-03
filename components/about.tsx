@@ -20,7 +20,7 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         <span className="italic">I started programming </span> as a creative outlet for telling stories in a new medium.
-        As an ungrad, I landed my first contract gig rebuilding my college's science library portal.
+        As an undergrad, I landed my first contract gig rebuilding my college's science library portal.
         After graduating with a Bachelor of Arts, I began my professional journey as an application developer on a secret 🤫 government contract.
         During this time, I formalized my tech knowledge, earning a graduate degree in engineering from FIT.
       </p>
