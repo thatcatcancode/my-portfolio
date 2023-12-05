@@ -19,23 +19,18 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        <span className="italic">I started programming </span> as a creative outlet for telling stories in a new medium.
-        As an undergrad, I landed my first contract gig rebuilding my college's science library portal.
-        After graduating with a Bachelor of Arts, I began my professional journey as an application developer on a secret 🤫 government contract.
-        During this time, I formalized my tech knowledge, earning a graduate degree in engineering from FIT.
+        <span className="italic">I began </span> my professional journey in 2008 as an application developer on a secret 🤫 government contract.
+        During this time, I earned a graduate degree in engineering. Since then, I've worked across various industries and tech stacks,
+        solving interesting problems and making lifelong friends along the way.
       </p>
       <p className="mb-3">
-        <span className="italic">Since then</span>, I've worked across various industries and tech stacks,
-        solving interesting problems and making lifelong friends along the way.
-        My favorite part of programming is going up against Goliath problems
-        that stare you down and make you question your ability.
-        There is nothing more satisfying than solving the gnarliest of problems,
-        looking back at it in your rearview mirror and thinking "that was easy",
-        as you zoom away to slay your next giant challenge.
+        <span className="italic">My favorite part about programming</span> is being able to easily volunteer my skillset to nonprofits and fun side projects, 
+        whether that's creating a wedding vendor platform, an outdoor cat safety app or helping rescue dogs find a forever home 🐶. 
+        I'm lucky to have skills that apply to so many different areas of life.
       </p>
       <p>
         <span className="italic">When I'm not coding</span>, I'm cherishing time
-        with family, while watching "footie" matches, playing in a lively kickball league,
+        with family, while watching "footie" matches ⚽️, playing in a lively kickball league,
         <span className="font-medium"> and making improvements to my home</span>. I am currently
         learning about coral reefs with my daughter. 🐠
       </p>
