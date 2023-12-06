@@ -8,6 +8,7 @@ import { BsArrow90DegRight } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import profileImg from "@/public/profile.jpeg";
+import { FaReact } from "react-icons/fa";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -63,10 +64,23 @@ export default function Intro() {
       >
         <span className="font-bold">✨Hi✨, I'm Lee, </span> a{" "}
         <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">15+ years</span> of experience. I enjoy
+        <span className="font-bold">10+ years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is on {" "}
         <span className="underline">frontend development</span>.
       </motion.h1>
+
+      <motion.div className="mb-3"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}>
+        <div className="mb-4 text-sm">
+          This app was built with <span className="italic">React & Next.js</span>
+        </div>
+        <div>Checkout <span className="font-bold">more projects</span> below
+        </div>
+      </motion.div>
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
@@ -77,14 +91,14 @@ export default function Intro() {
         }}
       >
         <Link
-          href="#contact"
+          href="#projects"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
-            setActiveSection("Contact");
+            setActiveSection("Projects");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          More projects{" "}
           <BsArrow90DegRight style={{ transform: 'rotate(90deg)' }} className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
       </motion.div>

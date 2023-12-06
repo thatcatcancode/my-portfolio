@@ -14,10 +14,6 @@ export const links = [
     hash: "#home",
   },
   {
-    name: "About",
-    hash: "#about",
-  },
-  {
     name: "Projects",
     hash: "#projects",
   },
@@ -60,7 +56,7 @@ export const experiencesData = [
     title: "Graduate Degree from FIT",
     location: "Denver, CO",
     description:
-      "I earned a graduate degree in engineering, while working full time for my first employer.",
+      "I earned a graduate degree in engineering, while working full time.",
     icon: React.createElement(LuGraduationCap),
     date: "2009 - 2012",
   },
@@ -84,7 +80,7 @@ export const experiencesData = [
     title: "My Consulting Business",
     location: "Melbourne, FL",
     description:
-      "I ran my own consulting business for a few years. My clients ranged from government to hardware startups. I upskilled in React!",
+      "I ran my own consulting business for a few years. My clients ranged from the Department of Energy to hardware startups.",
     icon: React.createElement(FaReact),
     date: "2018-2019",
   },
