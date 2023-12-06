@@ -76,7 +76,7 @@ export default function Intro() {
           delay: 0.1,
         }}>
         <div className="mb-4 text-sm">
-          This app was built with <span className="italic">React & Next.js</span>
+          This site was built with <span className="italic">React & Next.js</span>
         </div>
         <div>Checkout <span className="font-bold">more projects</span> below
         </div>
