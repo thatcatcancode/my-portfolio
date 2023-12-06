@@ -99,7 +99,7 @@ export const projectsData = [
     title: "FloHockey.tv",
     description:
       "Developed league & teams features so hockey fans have an ESSENTIAL destination to enjoy their favorite sport.",
-    tags: ["Node.js", "SSR", "A/B Test", "Server Driven UI", "Storybook", "TypeScript", "Jest", "Cypress", "JavaScript Framework"],
+    tags: ["Node.js", "SSR", "A/B Test", "Server Driven UI", "Storybook", "TypeScript", "Jest", "Cypress"],
     imageUrl: floHockeyImg,
   },
   {
@@ -120,7 +120,7 @@ export const projectsData = [
     title: "Payment Processing",
     description:
       "I worked on an agile team to deliver a more flexible payment processing platform to a luxury travel company.",
-    tags: ["JavaScript", "ASP.NET Web Api", "Agile Scrum", "Git"],
+    tags: ["Angular", "ASP.NET Web Api", "Agile Scrum", "Git"],
     imageUrl: inspiratoImg,
   }
 ] as const;
