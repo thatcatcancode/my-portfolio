@@ -7,6 +7,7 @@ import floWrestlingImg from "@/public/flowrestling.png";
 import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
+import giphySearchImg from "@/public/giphy-search.png";
 
 export const links = [
   {
@@ -103,11 +104,10 @@ export const projectsData = [
     imageUrl: floHockeyImg,
   },
   {
-    title: "Flight Tracker",
-    description:
-      "Developed Flight Tracker, the most feature and data rich application for globally tracking and managing private jets.",
-    tags: ["Geological Mapping", "MapBox", "Leaflet.js", "Angular", "Typescript", "SaaS"],
-    imageUrl: flightTrackerImg,
+    title: "GIF Search",
+    description: "A fun project building a search engine using the Giphy API. Includes mosaic layout, infinite scroll, error and load states + unit tests.",
+    tags: ["React", "Jest", "TailwindCSS", "SSR", "State Hooks"],
+    imageUrl: giphySearchImg
   },
   {
     title: "Athlete Profiles",
@@ -117,10 +117,17 @@ export const projectsData = [
     imageUrl: floWrestlingImg,
   },
   {
+    title: "Flight Tracker",
+    description:
+      "Developed Flight Tracker, the most feature and data rich application for globally tracking and managing private jets.",
+    tags: ["Geological Mapping", "MapBox", "Leaflet.js", "Angular", "Typescript", "SaaS"],
+    imageUrl: flightTrackerImg,
+  },
+  {
     title: "Payment Processing",
     description:
       "I worked on an agile team to deliver a more flexible payment processing platform to a luxury travel company.",
-    tags: ["Angular", "ASP.NET Web Api", "Agile Scrum", "Git"],
+    tags: ["JavaScript", "ASP.NET Web Api", "Agile Scrum", "Git"],
     imageUrl: inspiratoImg,
   }
 ] as const;

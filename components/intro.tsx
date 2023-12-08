@@ -58,7 +58,7 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-8 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -69,16 +69,14 @@ export default function Intro() {
         <span className="underline">frontend development</span>.
       </motion.h1>
 
-      <motion.div className="mb-3"
+      <motion.div className="mb-8"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
         }}>
-        <div className="mb-4 text-sm">
+        <div className="text-sm">
           This site was built with <span className="italic">React & Next.js</span>
-        </div>
-        <div>Checkout <span className="font-bold">more projects</span> below
         </div>
       </motion.div>
 
@@ -98,7 +96,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          More projects{" "}
+          My projects{" "}
           <BsArrow90DegRight style={{ transform: 'rotate(90deg)' }} className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
       </motion.div>
