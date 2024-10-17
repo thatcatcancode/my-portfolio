@@ -1,5 +1,4 @@
 import React from "react";
-import { CgAirplane, CgWorkAlt } from "react-icons/cg";
 import { FaJs, FaMediumM, FaNodeJs, FaPen, FaReact } from "react-icons/fa";
 import { LuBriefcase, LuGraduationCap, LuPartyPopper } from "react-icons/lu";
 import floHockeyImg from "@/public/flohockey.png";
@@ -7,7 +6,7 @@ import floWrestlingImg from "@/public/flowrestling.png";
 import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
-import giphySearchImg from "@/public/giphy-search.png";
+import stashImg from "@/public/stash2.png";
 
 export const links = [
   {
@@ -89,10 +88,17 @@ export const experiencesData = [
     title: "Dev Lead",
     location: "Orlando, FL",
     description:
-      "Now I'm the cross-team lead for web at FloSports. I've technically led all major initiatives here for the past four years. I upskilled in Performance, Observability & Node.js.",
+      "As the cross-team dev led at FloSports, I led all major initiatives for four years! I upskilled in Performance, Observability & Node.js.",
     icon: React.createElement(FaNodeJs),
-    date: "2019 - present",
+    date: "2019 - 2024",
   },
+  {
+    title: "Staff Software Engineer",
+    location: "New York, NY",
+    description: "Currently building the future of finance for everyday people!",
+    icon: React.createElement(FaReact),
+    date: "2024 - Present",
+  }
 ] as const;
 
 export const projectsData = [
@@ -104,10 +110,10 @@ export const projectsData = [
     imageUrl: floHockeyImg,
   },
   {
-    title: "GIF Search",
-    description: "A fun project building a search engine using the Giphy API. Includes mosaic layout, infinite scroll, error and load states + unit tests.",
-    tags: ["React", "Jest", "TailwindCSS", "SSR", "State Hooks"],
-    imageUrl: giphySearchImg
+    title: "Stash",
+    description: "A fintech product for helping everyday Americans build wealth, $5 at a time.",
+    tags: ["React", "Next.JS", "TailwindCSS", "Storybook", "A/B Test", "Jest", "Playwright"],
+    imageUrl: stashImg
   },
   {
     title: "Athlete Profiles",
@@ -138,12 +144,11 @@ export const skillsData = [
   "JavaScript",
   "TypeScript",
   "Node.js",
-  "Angular",
+  "React",
+  "Redux",
   "Nest.js",
   "Git",
   "Next.js",
-  "React",
-  "Redux",
   "A/B Testing",
   "Terraform",
   "Docker",
@@ -151,6 +156,7 @@ export const skillsData = [
   "Jest",
   "Cypress",
   "NoSQL",
+  "Redis",
   "Firebase",
   "API Design",
   "PHP",

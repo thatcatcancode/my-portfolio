@@ -63,8 +63,8 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">✨Hi✨, I'm Lee, </span> a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">10+ years</span> of experience. I enjoy
+        <span className="font-bold">full-stack engineer</span> with{" "}
+        <span className="font-bold">15+ years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is on {" "}
         <span className="underline">frontend development</span>.
       </motion.h1>
@@ -96,7 +96,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          My projects{" "}
+          My work{" "}
           <BsArrow90DegRight style={{ transform: 'rotate(90deg)' }} className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
       </motion.div>
