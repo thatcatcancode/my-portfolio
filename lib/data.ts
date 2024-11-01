@@ -1,5 +1,5 @@
 import React from "react";
-import { FaJs, FaMediumM, FaNodeJs, FaPen, FaReact } from "react-icons/fa";
+import { FaAngular, FaJs, FaMediumM, FaNodeJs, FaPen, FaReact } from "react-icons/fa";
 import { LuBriefcase, LuGraduationCap, LuPartyPopper } from "react-icons/lu";
 import floHockeyImg from "@/public/flohockey.png";
 import floWrestlingImg from "@/public/flowrestling.png";
@@ -81,7 +81,7 @@ export const experiencesData = [
     location: "Melbourne, FL",
     description:
       "I ran my own consulting business for a few years. My clients ranged from the Department of Energy to hardware startups.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(FaAngular),
     date: "2018-2019",
   },
   {
