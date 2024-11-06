@@ -103,17 +103,17 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "FloHockey.tv",
-    description:
-      "Developed league & teams features so hockey fans have an ESSENTIAL destination to enjoy their favorite sport.",
-    tags: ["Node.js", "SSR", "A/B Test", "Server Driven UI", "Storybook", "TypeScript", "Jest", "Cypress"],
-    imageUrl: floHockeyImg,
-  },
-  {
     title: "Stash",
-    description: "A fintech product for helping everyday Americans build wealth, $5 at a time.",
+    description: "A large fintech product, powered by React and a custom component design system.",
     tags: ["React", "Next.JS", "TailwindCSS", "Storybook", "A/B Test", "Jest", "Playwright"],
     imageUrl: stashImg
+  },
+  {
+    title: "FloHockey.tv",
+    description:
+      "Developed league & teams features so hockey fans have an ESSENTIAL destination for their favorite sport.",
+    tags: ["Node.js", "BFF", "SSR", "A/B Test", "Server Driven UI", "Storybook", "TypeScript", "Jest", "Cypress"],
+    imageUrl: floHockeyImg,
   },
   {
     title: "Athlete Profiles",
@@ -139,6 +139,11 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+  "Performance",
+  "Caching",
+  "Discoverability",
+  "Monitoring & Alerting",
+  "DX",
   "HTML",
   "CSS",
   "JavaScript",
@@ -149,17 +154,20 @@ export const skillsData = [
   "Nest.js",
   "Git",
   "Next.js",
+  "Vite",
   "A/B Testing",
   "Terraform",
   "Docker",
   "CI/CD",
   "Jest",
+  "Playwright",
   "Cypress",
+  "Supertest",
   "NoSQL",
+  "SQL",
   "Redis",
   "Firebase",
   "API Design",
-  "PHP",
   "C#",
 ] as const;
 
