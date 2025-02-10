@@ -64,8 +64,8 @@ export default function Intro() {
       >
         <span className="font-bold">✨Hi✨, I'm Lee, </span> a{" "}
         <span className="font-bold">full-stack engineer</span> with{" "}
-        <span className="font-bold">15+ years</span> of technical experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is on {" "}
+        <span className="font-bold">15+ years</span> of software experience. I enjoy
+        building <span className="italic">sites & apps</span>. I specialize in {" "}
         <span className="underline">frontend development</span>.
       </motion.h1>
 
@@ -76,7 +76,7 @@ export default function Intro() {
           delay: 0.1,
         }}>
         <div className="text-sm">
-          This site was built with <span className="italic">React & Next.js</span>
+          This site was built with <span className="italic">React + Typescript</span>
         </div>
       </motion.div>
 

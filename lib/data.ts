@@ -1,12 +1,12 @@
 import React from "react";
-import { FaAngular, FaJs, FaMediumM, FaNodeJs, FaPen, FaReact } from "react-icons/fa";
+import { FaAngular, FaJs, FaMediumM, FaNodeJs, FaPen, FaReact, FaRobot } from "react-icons/fa";
 import { LuBriefcase, LuGraduationCap, LuPartyPopper } from "react-icons/lu";
 import floHockeyImg from "@/public/flohockey.png";
 import floWrestlingImg from "@/public/flowrestling.png";
 import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
-import stashImg from "@/public/stash2.png";
+import stashAiImg from "@/public/stash-ai3.png";
 
 export const links = [
   {
@@ -81,7 +81,7 @@ export const experiencesData = [
     location: "Melbourne, FL",
     description:
       "I ran my own consulting business for a few years. My clients ranged from the Department of Energy to hardware startups.",
-    icon: React.createElement(FaAngular),
+    icon: React.createElement(FaReact),
     date: "2018-2019",
   },
   {
@@ -93,33 +93,33 @@ export const experiencesData = [
     date: "2019 - 2024",
   },
   {
-    title: "Staff Software Engineer",
+    title: "Senior Software Engineer IV at Stash",
     location: "New York, NY",
-    description: "Currently building the future of finance for everyday people!",
-    icon: React.createElement(FaReact),
+    description: "Currently building the future of finance for everyday people with the help of our custom AI system!",
+    icon: React.createElement(FaRobot),
     date: "2024 - Present",
   }
 ] as const;
 
 export const projectsData = [
   {
-    title: "Stash",
-    description: "A large fintech product, powered by React and a custom component design system.",
-    tags: ["React", "Next.JS", "TailwindCSS", "Storybook", "A/B Test", "Jest", "Playwright"],
-    imageUrl: stashImg
+    title: "AI Money Coach",
+    description: "Brought AI-powered Money Coach to life on web. First fintech company to have this feature!",
+    tags: ["React", "Vite", "A/B Test", "OpenAI", "Python", "Fetch API", "Streaming", "Playwright", "Error Handling", "Analytics"],
+    imageUrl: stashAiImg
   },
   {
     title: "FloHockey.tv",
     description:
       "Developed league & teams features so hockey fans have an ESSENTIAL destination for their favorite sport.",
-    tags: ["Node.js", "BFF", "SSR", "A/B Test", "Server Driven UI", "Storybook", "TypeScript", "Jest", "Cypress"],
+    tags: ["Node.js", "Nest.js", "BFF", "SSR", "A/B Test", "Server Driven UI", "Storybook", "TypeScript", "Jest", "Cypress"],
     imageUrl: floHockeyImg,
   },
   {
     title: "Athlete Profiles",
     description:
       "Built full stack pipeline for ingesting & displaying sport data on newly crafted Wrestling & Juijitsu athlete profiles.",
-    tags: ["Fullstack", "TypeScript", "SEO", "Node.js", "Firestore", "NoSQL", "Storybook", "SSR", "Redis", "CDN", "A/B Test", "Jest"],
+    tags: ["Fullstack", "TypeScript", "SEO", "Node.js", "Nest.js", "Firestore", "NoSQL", "Storybook", "SSR", "Redis", "CDN", "A/B Test", "Jest"],
     imageUrl: floWrestlingImg,
   },
   {
@@ -139,16 +139,12 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "Performance",
-  "Caching",
-  "Discoverability",
-  "Monitoring & Alerting",
-  "DX",
   "HTML",
   "CSS",
   "JavaScript",
   "TypeScript",
   "Node.js",
+  "OpenAI",
   "React",
   "Redux",
   "Nest.js",
@@ -156,6 +152,9 @@ export const skillsData = [
   "Next.js",
   "Vite",
   "A/B Testing",
+  "Segment",
+  "Mixpanel",
+  "Analytics",
   "Terraform",
   "Docker",
   "CI/CD",
@@ -168,7 +167,13 @@ export const skillsData = [
   "Redis",
   "Firebase",
   "API Design",
+  "Http Streaming",
   "C#",
+  "Performance",
+  "Caching",
+  "Discoverability",
+  "Monitoring & Alerting",
+  "DX",
 ] as const;
 
 export const articleData = [
