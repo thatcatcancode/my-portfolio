@@ -1,5 +1,5 @@
 import React from "react";
-import { FaAngular, FaJs, FaMediumM, FaNodeJs, FaPen, FaReact, FaRobot } from "react-icons/fa";
+import { FaDatabase, FaMap, FaMediumM, FaNodeJs, FaPen, FaPython, FaReact, FaServer } from "react-icons/fa";
 import { LuBriefcase, LuGraduationCap, LuPartyPopper } from "react-icons/lu";
 import floHockeyImg from "@/public/flohockey.png";
 import floWrestlingImg from "@/public/flowrestling.png";
@@ -40,7 +40,7 @@ export const experiencesData = [
     title: "University of Florida 🐊",
     location: "Gainesville, FL",
     description:
-      "Graduated with an English Literature degree. I love linguistics, which is how I discovered coding. Programming is really just a different syntax for communicating... except with computers. 🤖",
+      "Graduated with an English Literature degree. I love linguistics, which is how I discovered coding. As a student, I rebuilt my college's science library.",
     icon: React.createElement(LuGraduationCap),
     date: "2003 - 2007",
   },
@@ -48,15 +48,15 @@ export const experiencesData = [
     title: "My First Job",
     location: "Satellite Beach, FL",
     description:
-      "Began my professional journey as an Application Developer on a secret 🤫 government contract.",
-    icon: React.createElement(LuPartyPopper),
+      "Began my professional journey as an Application Developer on a secret 🤫 government contract. I worked mainly with relational databases and server-driven web applications.",
+    icon: React.createElement(FaDatabase),
     date: "2007 - 2012",
   },
   {
     title: "Graduate Degree from FIT",
     location: "Denver, CO",
     description:
-      "I earned a graduate degree in engineering, while working full time.",
+      "I earned a graduate degree from the College of Engineering while working full-time.",
     icon: React.createElement(LuGraduationCap),
     date: "2009 - 2012",
   },
@@ -72,8 +72,8 @@ export const experiencesData = [
     title: "Senior Software Engineer",
     location: "Melbourne, FL",
     description:
-      "My first official senior role was at Satcom Direct building full stack aviation software. I LOVED working with geospatial data!",
-    icon: React.createElement(FaJs),
+      "My first official senior role was at Satcom Direct building full stack aviation software. I LOVED working with geospatial data and building map features!",
+    icon: React.createElement(FaMap),
     date: "2015 - 2018",
   },
   {
@@ -81,14 +81,14 @@ export const experiencesData = [
     location: "Melbourne, FL",
     description:
       "I ran my own consulting business for a few years. My clients ranged from the Department of Energy to hardware startups.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(FaServer),
     date: "2018-2019",
   },
   {
     title: "Dev Lead",
     location: "Orlando, FL",
     description:
-      "As the cross-team dev led at FloSports, I led all major initiatives for four years! I upskilled in Performance, Observability & Node.js.",
+      "As the cross-team dev lead at FloSports, I led all major initiatives for four years! I upskilled in Performance, Observability & Node.js.",
     icon: React.createElement(FaNodeJs),
     date: "2019 - 2024",
   },
@@ -96,8 +96,15 @@ export const experiencesData = [
     title: "Senior Software Engineer IV at Stash",
     location: "New York, NY",
     description: "Currently building the future of finance for everyday people with the help of our custom AI system!",
-    icon: React.createElement(FaRobot),
+    icon: React.createElement(FaReact),
     date: "2024 - Present",
+  },
+  {
+    title: "Enrolled in Purdue University's Applied Generative AI Program",
+    location: "Online",
+    description: "Gaining practical skills to drive innovation and success. I normally don't take formal courses, but AI is a beast I think it warrants taking a more deliberate approach.",
+    icon: React.createElement(FaPython),
+    date: "March 2025 - July 2025",
   }
 ] as const;
 

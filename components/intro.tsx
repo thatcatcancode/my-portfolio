@@ -62,11 +62,12 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">✨Hi✨, I'm Lee, </span> a{" "}
-        <span className="font-bold">full-stack engineer</span> with{" "}
-        <span className="font-bold">15+ years</span> of software experience. I enjoy
-        building <span className="italic">sites & apps</span>. I specialize in {" "}
-        <span className="underline">frontend development</span>.
+        <span className="font-bold">✨Hello!✨ I'm Lee, </span> a {" "}
+        <span className="font-bold">full-stack engineer</span> with a focus on {" "}
+        <span className="font-bold">AI-powered solutions</span>. I enjoy building {" "}
+        <span className="italic">intelligent</span>, <span className="italic">data-driven</span> {" "}
+        systems that <span className="underline">personalize</span> user experience and drive {" "}
+        <span className="underline">business innovation</span>.
       </motion.h1>
 
       <motion.div className="mb-8"
@@ -75,9 +76,6 @@ export default function Intro() {
         transition={{
           delay: 0.1,
         }}>
-        <div className="text-sm">
-          This site was built with <span className="italic">React + Typescript</span>
-        </div>
       </motion.div>
 
       <motion.div
