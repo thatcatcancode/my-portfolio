@@ -1,6 +1,6 @@
 import React from "react";
 import { FaDatabase, FaMap, FaMediumM, FaNodeJs, FaPen, FaPython, FaReact, FaServer } from "react-icons/fa";
-import { LuBriefcase, LuGraduationCap, LuPartyPopper } from "react-icons/lu";
+import { LuBriefcase, LuGraduationCap } from "react-icons/lu";
 import eventHubApi from "@/public/event-hub-api.png";
 import floWrestlingImg from "@/public/flowrestling.png";
 import inspiratoImg from "@/public/inspirato.png";
