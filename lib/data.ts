@@ -1,12 +1,12 @@
 import React from "react";
 import { FaDatabase, FaMap, FaMediumM, FaNodeJs, FaPen, FaPython, FaReact, FaServer } from "react-icons/fa";
 import { LuBriefcase, LuGraduationCap, LuPartyPopper } from "react-icons/lu";
-import floHockeyImg from "@/public/flohockey.png";
+import eventHubApi from "@/public/event-hub-api.png";
 import floWrestlingImg from "@/public/flowrestling.png";
 import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
-import stashAiImg from "@/public/stash-ai3.png";
+import stashAiImg from "@/public/stash-money-coach-zoomed.png";
 
 export const links = [
   {
@@ -102,7 +102,7 @@ export const experiencesData = [
   {
     title: "Enrolled in Purdue University's Applied Generative AI Program",
     location: "Online",
-    description: "Gaining practical skills to drive innovation and success. I normally don't take formal courses, but AI is a beast I think it warrants taking a more deliberate approach.",
+    description: "Gaining practical skills to drive innovation and success.",
     icon: React.createElement(FaPython),
     date: "March 2025 - July 2025",
   }
@@ -111,36 +111,36 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "AI Money Coach",
-    description: "Brought AI-powered Money Coach to life on web. First fintech company to have this feature!",
+    description: "Brought AI-powered Money Coach to life on web. Customized, fine-tuned models provide personalized financial advice.",
     tags: ["React", "Vite", "A/B Test", "OpenAI", "Python", "Fetch API", "Streaming", "Playwright", "Error Handling", "Analytics"],
     imageUrl: stashAiImg
   },
   {
-    title: "FloHockey.tv",
+    title: "Versatile Event Hubs",
     description:
-      "Developed league & teams features so hockey fans have an ESSENTIAL destination for their favorite sport.",
+      "Developed a unified BFF API and UI to support event hubs for 25+ sports.",
     tags: ["Node.js", "Nest.js", "BFF", "SSR", "A/B Test", "Server Driven UI", "Storybook", "TypeScript", "Jest", "Cypress"],
-    imageUrl: floHockeyImg,
+    imageUrl: eventHubApi,
   },
   {
     title: "Athlete Profiles",
     description:
-      "Built full stack pipeline for ingesting & displaying sport data on newly crafted Wrestling & Juijitsu athlete profiles.",
-    tags: ["Fullstack", "TypeScript", "SEO", "Node.js", "Nest.js", "Firestore", "NoSQL", "Storybook", "SSR", "Redis", "CDN", "A/B Test", "Jest"],
+      "Built full stack pipeline for ingesting & displaying sport data on expertly crafted athlete profiles.",
+    tags: ["TypeScript", "SEO", "Node.js", "Nest.js", "Firestore", "NoSQL", "Storybook", "SSR", "Redis", "CDN", "A/B Test", "Jest"],
     imageUrl: floWrestlingImg,
   },
   {
     title: "Flight Tracker",
     description:
       "Developed Flight Tracker, the most feature and data rich application for globally tracking and managing private jets.",
-    tags: ["Geological Mapping", "MapBox", "Leaflet.js", "Angular", "Typescript", "SaaS"],
+    tags: ["Geological Mapping", "MapBox", "Geometry", "Typescript", "SaaS", "Data Feeds", "Map Projection"],
     imageUrl: flightTrackerImg,
   },
   {
     title: "Payment Processing",
     description:
       "I worked on an agile team to deliver a more flexible payment processing platform to a luxury travel company.",
-    tags: ["JavaScript", "ASP.NET Web Api", "Agile Scrum", "Git"],
+    tags: ["JavaScript", "ASP.NET Web Api", "SQL", "Agile Scrum", "Git"],
     imageUrl: inspiratoImg,
   }
 ] as const;
@@ -151,6 +151,7 @@ export const skillsData = [
   "JavaScript",
   "TypeScript",
   "Node.js",
+  "Python",
   "OpenAI",
   "React",
   "Redux",
@@ -171,6 +172,7 @@ export const skillsData = [
   "Supertest",
   "NoSQL",
   "SQL",
+  "Postgres",
   "Redis",
   "Firebase",
   "API Design",
