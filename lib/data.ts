@@ -6,7 +6,7 @@ import floWrestlingImg from "@/public/flowrestling.png";
 import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
-import stashAiImg from "@/public/stash-money-coach-zoomed.png";
+import stashAiImg from "@/public/stash-ai-zoomed.png";
 
 export const links = [
   {

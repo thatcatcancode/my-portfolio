@@ -8,7 +8,6 @@ import { BsArrow90DegRight } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import profileImg from "@/public/profile.jpeg";
-import { FaReact } from "react-icons/fa";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
