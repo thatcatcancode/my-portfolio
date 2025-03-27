@@ -40,7 +40,7 @@ export const experiencesData = [
     title: "University of Florida 🐊",
     location: "Gainesville, FL",
     description:
-      "Graduated with an English Literature degree. I love linguistics, which is how I discovered coding. As a student, I rebuilt my college's science library.",
+      "Go Gators! As a student, I rebuilt my college's science library and worked at the Digital Library Center using technology to bring old stories to life.",
     icon: React.createElement(LuGraduationCap),
     date: "2003 - 2007",
   },
