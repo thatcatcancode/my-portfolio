@@ -89,14 +89,14 @@ export const experiencesData = [
     title: "Dev Lead",
     location: "Orlando, FL",
     description:
-      "As the cross-team dev lead at FloSports, I led all major initiatives for four years! I upskilled in Performance, Observability & Node.js.",
+      "As the cross-team dev lead at FloSports, I led all major initiatives for four years! I upskilled in Performance & Observability.",
     icon: React.createElement(FaNodeJs),
     date: "2019 - 2024",
   },
   {
     title: "Senior Software Engineer IV at Stash",
     location: "New York, NY",
-    description: "Currently building the future of finance for everyday people with the help of our custom AI system!",
+    description: "Currently building the future of finance for everyday people with the help of our robust AI system!",
     icon: React.createElement(FaReact),
     date: "2024 - Present",
   },
