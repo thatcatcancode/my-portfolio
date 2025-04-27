@@ -103,7 +103,7 @@ export const experiencesData = [
   {
     title: "Enrolled in Purdue University's Applied Generative AI Program",
     location: "Online",
-    description: "Gaining practical skills to drive innovation and success.",
+    description: "Gaining foundational knowledge of Transformer Architecture, LLMs, RAG, and the inner workings of Artificial Neural Networks and CNNs in order to choose the best approach for solving any given problem. Creating projects with Hugging Face transformers, Open AI GPTs, Ollama, and cloud-hosted services + vector databases.",
     icon: React.createElement(FaPython),
     date: "March 2025 - July 2025",
   }
