@@ -7,6 +7,7 @@ import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
 import stashAiImg from "@/public/stash-ai-zoomed.png";
+import sciGuardImg from "@/public/sci-guard-aqua.png";
 
 export const links = [
   {
@@ -110,6 +111,13 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Sci-Guard: Saving science one word at a time with GenAI",
+    description: "I developed this free AI tool that scans grant proposals for banned words and rewrites sentences.",
+    tags: ["Python", "FastAPI", "ntlk", "spaCy", "GPT-4.1-mini", "OpenAI", "Hugging Face", "Docker", "AWS", "React"],
+    imageUrl: sciGuardImg,
+    url: 'https://github.com/thatcatcancode/sci-guard'
+  },
+  {
     title: "AI Money Coach",
     description: "Brought AI-powered Money Coach to life on web. Customized, fine-tuned models provide personalized financial advice.",
     tags: ["React", "Vite", "A/B Test", "OpenAI", "Python", "Fetch API", "Streaming", "Playwright", "Error Handling", "Analytics"],
@@ -187,8 +195,16 @@ export const skillsData = [
 
 export const articleData = [
   {
-    title: 'Ship More Frequently 🚀',
-    description: 'by Automatically Generating TypeScript Types',
+    title: 'Using AI to Protect Scientific Research',
+    description: 'Sci-Guard: Saving science one word at a time with GenAI',
+    url: 'https://medium.com/@leeadams1414/using-ai-to-protect-scientific-research-4764bf91b9c1',
+    imageUrl: 'https://miro.medium.com/v2/resize:fit:4800/format:webp/1*KnUDCdc9akrGfxZdAUHwSg.png',
+    icon: React.createElement(FaMediumM),
+    source: 'Medium'
+  },
+  {
+    title: 'Improve the Product and DX with Types',
+    description: 'Use ts-morph to Auto Generate Types',
     url: 'https://medium.com/flosports-engineering/ship-more-frequently-4fa7d543440',
     imageUrl: 'https://miro.medium.com/v2/resize:fit:600/format:webp/0*dQNljcCyHDUaWocM',
     icon: React.createElement(FaMediumM),
