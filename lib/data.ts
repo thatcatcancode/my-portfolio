@@ -6,7 +6,7 @@ import floWrestlingImg from "@/public/flowrestling.png";
 import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
-import stashAiImg from "@/public/stash-ai-zoomed.png";
+import stashAiImg from "@/public/stash-ai-money-coach.png";
 import sciGuardImg from "@/public/sci-guard-aqua.png";
 
 export const links = [
@@ -112,15 +112,15 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "Sci-Guard: Saving science one word at a time with GenAI",
-    description: "I developed this free AI tool that scans grant proposals for banned words and rewrites sentences.",
+    description: "I developed free AI tool that scans grant proposals for banned words and rewrites sentences.",
     tags: ["Python", "FastAPI", "ntlk", "spaCy", "GPT-4.1-mini", "OpenAI", "Hugging Face", "Docker", "AWS", "React"],
     imageUrl: sciGuardImg,
     url: 'https://github.com/thatcatcancode/sci-guard'
   },
   {
-    title: "AI Money Coach",
-    description: "Brought AI-powered Money Coach to life on web. Customized, fine-tuned models provide personalized financial advice.",
-    tags: ["React", "Vite", "A/B Test", "OpenAI", "Python", "Fetch API", "Streaming", "Playwright", "Error Handling", "Analytics"],
+    title: "Stash Money Coach",
+    description: "Brought AI-powered Money Coach to life on web. Fine-tuned GPT agents provide personalized financial advice.",
+    tags: ["OpenAI", "Python", "FastAPI", "HTTP Streaming", "React", "Vite", "TypeScript", "A/B Test",],
     imageUrl: stashAiImg
   },
   {
