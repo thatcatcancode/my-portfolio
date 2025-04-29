@@ -39,7 +39,7 @@ export default function Project({
             alt="Project I worked on"
             quality={95}
             fill
-            className="object-cover object-center transition 
+            className="object-cover object-top transition 
               group-hover:scale-[1.02]"
           />
         </div>
