@@ -7,7 +7,7 @@ import inspiratoImg from "@/public/inspirato.png";
 import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
 import stashAiImg from "@/public/stash-ai-money-coach.png";
-import sciGuardImg from "@/public/sci-guard-aqua.png";
+import sciGuardImg from "@/public/sci-guard-screenshot.png";
 
 export const links = [
   {
@@ -102,7 +102,7 @@ export const experiencesData = [
   },
   {
     title: "Enrolled in Purdue University's Applied Generative AI Program",
-    location: "Online",
+    location: "",
     description: "Gaining foundational knowledge of Transformer Architecture, LLMs, RAG, and the inner workings of Artificial Neural Networks and CNNs in order to choose the best approach for solving any given problem. Creating projects with Hugging Face transformers, Open AI GPTs, Ollama, and cloud-hosted services + vector databases.",
     icon: React.createElement(FaPython),
     date: "March 2025 - July 2025",
@@ -112,7 +112,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "Sci-Guard: Saving science one word at a time with GenAI",
-    description: "I developed free AI tool that scans grant proposals for banned words and rewrites sentences.",
+    description: "I developed this free AI tool that scans grant proposals for banned words and rewrites sentences.",
     tags: ["Python", "FastAPI", "ntlk", "spaCy", "GPT-4.1-mini", "OpenAI", "Hugging Face", "Docker", "AWS", "React"],
     imageUrl: sciGuardImg,
     url: 'https://github.com/thatcatcancode/sci-guard'
