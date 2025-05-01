@@ -38,54 +38,23 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "University of Florida 🐊",
-    location: "Gainesville, FL",
-    description:
-      "Go Gators! As a student, I rebuilt my college's science library and worked at the Digital Library Center using technology to bring old stories to life.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2003 - 2007",
+    id: 9,
+    title: "Enrolled in Purdue University's Applied Generative AI Program",
+    location: "",
+    description: "Gaining foundational knowledge of Transformer Architecture, LLMs, RAG, and the use cases for each in order innovate. Creating projects with Hugging Face transformers, Open AI GPTs, Ollama, and cloud-hosted services + vector databases.",
+    icon: React.createElement(FaPython),
+    date: "March 2025 - July 2025",
   },
   {
-    title: "My First Job",
-    location: "Satellite Beach, FL",
-    description:
-      "Began my professional journey as an Application Developer on a secret 🤫 government contract. I worked mainly with relational databases and server-driven web applications.",
-    icon: React.createElement(FaDatabase),
-    date: "2007 - 2012",
+    id: 8,
+    title: "Senior Software Engineer IV at Stash",
+    location: "New York, NY",
+    description: "Currently building the future of finance for everyday people with the help of our robust AI system!",
+    icon: React.createElement(FaReact),
+    date: "2024 - Present",
   },
   {
-    title: "Graduate Degree from FIT",
-    location: "Denver, CO",
-    description:
-      "I earned a graduate degree from the College of Engineering while working full-time.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2009 - 2012",
-  },
-  {
-    title: "Consulting in Colorado",
-    location: "Denver, CO",
-    description:
-      "I worked full time for a small software consulting company called Aspenware. We shipped as an agile scrum team to solve problems at various companies. Besides all the cool tech, I learned how to set customer expectations & deliver on time.",
-    icon: React.createElement(LuBriefcase),
-    date: "2012 - 2015",
-  },
-  {
-    title: "Senior Software Engineer",
-    location: "Melbourne, FL",
-    description:
-      "My first official senior role was at Satcom Direct building full stack aviation software. I LOVED working with geospatial data and building map features!",
-    icon: React.createElement(FaMap),
-    date: "2015 - 2018",
-  },
-  {
-    title: "My Consulting Business",
-    location: "Melbourne, FL",
-    description:
-      "I ran my own consulting business for a few years. My clients ranged from the Department of Energy to hardware startups.",
-    icon: React.createElement(FaServer),
-    date: "2018-2019",
-  },
-  {
+    id: 7,
     title: "Dev Lead",
     location: "Orlando, FL",
     description:
@@ -94,25 +63,66 @@ export const experiencesData = [
     date: "2019 - 2024",
   },
   {
-    title: "Senior Software Engineer IV at Stash",
-    location: "New York, NY",
-    description: "Currently building the future of finance for everyday people with the help of our robust AI system!",
-    icon: React.createElement(FaReact),
-    date: "2024 - Present",
+    id: 6,
+    title: "My Consulting Business",
+    location: "Melbourne, FL",
+    description:
+      "I ran my own consulting business for a few years. My clients ranged from the Department of Energy to hardware startups.",
+    icon: React.createElement(FaServer),
+    date: "2018-2019",
   },
   {
-    title: "Enrolled in Purdue University's Applied Generative AI Program",
-    location: "",
-    description: "Gaining foundational knowledge of Transformer Architecture, LLMs, RAG, and the inner workings of Artificial Neural Networks and CNNs in order to choose the best approach for solving any given problem. Creating projects with Hugging Face transformers, Open AI GPTs, Ollama, and cloud-hosted services + vector databases.",
-    icon: React.createElement(FaPython),
-    date: "March 2025 - July 2025",
-  }
-] as const;
+    id: 5,
+    title: "Senior Software Engineer",
+    location: "Melbourne, FL",
+    description:
+      "My first official senior role was at Satcom Direct building full stack aviation software. I LOVED working with geospatial data and building map features!",
+    icon: React.createElement(FaMap),
+    date: "2015 - 2018",
+  },
+  {
+    id: 4,
+    title: "Consulting in Colorado",
+    location: "Denver, CO",
+    description:
+      "I worked full time for a small software consulting company called Aspenware. We shipped as an agile scrum team to solve problems at various companies. Besides all the cool tech, I learned how to set customer expectations & deliver on time.",
+    icon: React.createElement(LuBriefcase),
+    date: "2012 - 2015",
+  },
+  {
+    id: 3,
+    title: "Graduate Degree from FIT",
+    location: "Denver, CO",
+    description:
+      "I earned a graduate degree from the College of Engineering while working full-time.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2009 - 2012",
+  },
+  {
+    id: 2,
+    title: "My First Job",
+    location: "Satellite Beach, FL",
+    description:
+      "Began my professional journey as an Application Developer on a secret 🤫 government contract. I worked mainly with relational databases and server-driven web applications.",
+    icon: React.createElement(FaDatabase),
+    date: "2007 - 2012",
+  },
+
+  {
+    id: 1,
+    title: "University of Florida 🐊",
+    location: "Gainesville, FL",
+    description:
+      "Go Gators! As a student, I rebuilt my college's science library and worked at the Digital Library Center using technology to bring old stories to life.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2003 - 2007",
+  },
+];
 
 export const projectsData = [
   {
-    title: "Sci-Guard: Saving science one word at a time with GenAI",
-    description: "I developed this free AI tool that scans grant proposals for banned words and rewrites sentences.",
+    title: "Sci-Guard: Saving science one word at a time with GenAI ✨",
+    description: "I developed this free AI tool that scans grant proposals for banned words and rewrites sentences using OpenAI's GPT-4.1-mini.",
     tags: ["Python", "FastAPI", "ntlk", "spaCy", "GPT-4.1-mini", "OpenAI", "Hugging Face", "Docker", "AWS", "React"],
     imageUrl: sciGuardImg,
     url: 'https://github.com/thatcatcancode/sci-guard'
