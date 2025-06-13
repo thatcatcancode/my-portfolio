@@ -8,6 +8,7 @@ import flightTrackerImg from "@/public/flight-tracker.png";
 import builtInAtxImg from "@/public/builtinatx.png";
 import stashAiImg from "@/public/stash-ai-money-coach.png";
 import sciGuardImg from "@/public/sci-guard-screenshot.png";
+import lipidDetectImg from "@/public/lipid-detect-ai-image.png";
 
 export const links = [
   {
@@ -120,6 +121,13 @@ export const experiencesData = [
 ];
 
 export const projectsData = [
+  // {
+  //   title: "LipidDetectAi: Fine-tuned vision model for predicting microscopy images ✨",
+  //   description: "This is a WIP! Practicing supervised learning by processing hundreds of labeled microscopic images to fine-tune a CNN for predicting lipid properties.",
+  //   tags: ["Python", "FastAPI", "Machine Learning", "CNN", "PyTorch", "TensorFlow", "DenseNet", "Image Classification"],
+  //   imageUrl: lipidDetectImg,
+  //   url: 'https://github.com/thatcatcancode/lipid-detect-ai'
+  // },
   {
     title: "Sci-Guard: Saving science one word at a time with GenAI ✨",
     description: "I developed this free AI tool that scans grant proposals for banned words and rewrites sentences using OpenAI's GPT-4.1-mini.",
