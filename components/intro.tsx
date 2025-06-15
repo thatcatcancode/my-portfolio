@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { v4 as uuid } from 'uuid';
 import { BsArrow90DegRight } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -12,6 +13,7 @@ import profileImg from "@/public/profile.jpeg";
 type Message = {
   role: 'user' | 'agent';
   content: string;
+  id: string;
 }
 
 export default function Intro() {
@@ -27,8 +29,10 @@ export default function Intro() {
     if (input.trim()) {
       console.log("User input:", input);
       e.currentTarget.reset();
-      const userMessage: Message = { role: 'user', content: input }
+      const userId = uuid();
+      const userMessage: Message = { role: 'user', content: input, id: userId }
       setMessages([...messages, userMessage]);
+      //TODO Move to env var CHAT_API_URL
       const response = await fetch('https://human-ai-latest.onrender.com/chat', {
         method: 'POST',
         headers: {
@@ -39,13 +43,18 @@ export default function Intro() {
         })
       })
       const data = await response.json();
-      console.log('data', data);
       if (data.data.role === 'agent' && !!data.data.content) {
         setMessages([
           ...messages,
           userMessage,
-          data.data
-        ])
+          { id: uuid(), role: 'agent', content: data.data.content }
+        ]);
+        setTimeout(() => {
+          const message = document.getElementById(userId);
+          if (message) {
+            message.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 1000);
       }
     }
   };
@@ -102,7 +111,8 @@ export default function Intro() {
       <div className="flex flex-col mx-auto">
         {messages.map((message, index) => (
           <motion.div
-            key={index}
+            key={message.id}
+            id={message.id}
             className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
