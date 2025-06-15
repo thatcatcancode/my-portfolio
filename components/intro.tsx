@@ -19,7 +19,7 @@ export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const [messages, setMessages] = useState<Message[]>([]);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const input = formData.get('message') as string;
@@ -27,7 +27,26 @@ export default function Intro() {
     if (input.trim()) {
       console.log("User input:", input);
       e.currentTarget.reset();
-      setMessages([...messages, { role: 'user', content: input }, { role: 'agent', content: "Leila is an amazing person, you should hire her!" }]);
+      const userMessage: Message = { role: 'user', content: input }
+      setMessages([...messages, userMessage]);
+      const response = await fetch('https://human-ai-latest.onrender.com/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: input
+        })
+      })
+      const data = await response.json();
+      console.log('data', data);
+      if (data.data.role === 'agent' && !!data.data.content) {
+        setMessages([
+          ...messages,
+          userMessage,
+          data.data
+        ])
+      }
     }
   };
 
