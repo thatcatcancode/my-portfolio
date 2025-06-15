@@ -17,10 +17,10 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] mx-auto text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
+      <div className="flex items-start justify-center gap-4 pr-2">
+        <div className="relative flex-shrink-0">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -36,49 +36,34 @@ export default function Intro() {
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-16 w-16 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
-
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
         </div>
+
+        <motion.div
+          className="relative text-left bg-white/10 backdrop-blur-sm rounded-tl-none rounded-2xl p-4 shadow-lg"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <motion.h1
+            className="text-xl sm:text-2xl font-medium !leading-[1.5] relative z-10"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <span className="font-bold">Hello! I'm Leila, </span> a {" "}
+            <span className="font-bold">full-stack engineer</span> with a focus on {" "}
+            <span className="font-bold">AI-powered solutions</span>. I enjoy building {" "}
+            <span className="italic">intelligent</span>, <span className="italic">data-driven</span> {" "}
+            systems that <span className="underline">personalize</span> user experience and drive {" "}
+            <span className="underline">business innovation</span>.
+          </motion.h1>
+        </motion.div>
       </div>
 
-      <motion.h1
-        className="mb-8 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">✨Hello!✨ I'm Leila, </span> a {" "}
-        <span className="font-bold">full-stack engineer</span> with a focus on {" "}
-        <span className="font-bold">AI-powered solutions</span>. I enjoy building {" "}
-        <span className="italic">intelligent</span>, <span className="italic">data-driven</span> {" "}
-        systems that <span className="underline">personalize</span> user experience and drive {" "}
-        <span className="underline">business innovation</span>.
-      </motion.h1>
-
-      <motion.div className="mb-8"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}>
-      </motion.div>
-
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium mt-8"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
