@@ -8,6 +8,7 @@ import { BsArrow90DegRight } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import profileImg from "@/public/profile.jpeg";
+import agentImg from "@/public/agent.png";
 
 type Message = {
   role: 'user' | 'agent';
@@ -27,7 +28,7 @@ export default function Intro() {
     if (input.trim()) {
       console.log("User input:", input);
       e.currentTarget.reset();
-      setMessages([...messages, { role: 'user', content: input }]);
+      setMessages([...messages, { role: 'user', content: input }, { role: 'agent', content: "Leila is an amazing person, you should hire her!" }]);
     }
   };
 
@@ -80,15 +81,39 @@ export default function Intro() {
         </motion.div>
       </div>
 
-      {messages.map((message, index) => (
-        <div key={index} className="text-gray-600 dark:text-white/40 mt-2">
-          {message.role === 'user' && <div className="text-right">{message.content}</div>}
-          {message.role === 'agent' && <div className="text-left">{message.content}</div>}
-        </div>
-      ))}
+      <div className="flex flex-col gap-4 max-w-[40rem] mx-auto mt-4">
+        {messages.map((message, index) => (
+          <motion.div
+            key={index}
+            className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 * index }}
+          >
+            {message.role === 'agent' && (
+              <div className="relative flex-shrink-0 mr-2">
+                <Image
+                  src={agentImg}
+                  alt="AI assistant avatar"
+                  width="48"
+                  height="48"
+                  quality="95"
+                  className="h-12 w-12 rounded-full object-cover border-[1px] border-white shadow-xl"
+                />
+              </div>
+            )}
+            <div className={`relative text-left bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-2xl p-4 shadow-lg ${message.role === 'agent' ? 'rounded-tl-none' : 'rounded-tr-none'
+              }`}>
+              <div className="relative z-10 text-gray-900 dark:text-white">
+                {message.content}
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
       <motion.div
-        className="fixed bottom-0 left-0 right-0 p-4 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-white/10 z-10"
+        className="fixed bottom-0 left-0 right-0 p-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-t border-gray-200/50 dark:border-white/10 z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
@@ -98,7 +123,7 @@ export default function Intro() {
             <input
               type="text"
               name="message"
-              placeholder="Ask me anything..."
+              placeholder="Ask my AI assisant anything..."
               className="w-full p-4 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-white/10 focus:outline-none focus:border-gray-300 dark:focus:border-white/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 shadow-lg"
             />
             <button
@@ -111,7 +136,7 @@ export default function Intro() {
             </button>
           </form>
           <p className="text-center text-sm text-gray-600 dark:text-white/40 mt-2">
-            RAG-based app powered by Llama, HuggingFace, FastAPI, LangChain, & Pinecone
+            RAG-based app powered by Llama, HuggingFace, Pinecone, Python, FastAPI, & LangChain
           </p>
         </div>
       </motion.div>
