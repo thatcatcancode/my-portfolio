@@ -20,6 +20,7 @@ export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const [messages, setMessages] = useState<Message[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,34 +28,42 @@ export default function Intro() {
     const input = formData.get('message') as string;
 
     if (input.trim()) {
+      setIsLoading(true);
       console.log("User input:", input);
       e.currentTarget.reset();
       const userId = uuid();
       const userMessage: Message = { role: 'user', content: input, id: userId }
       setMessages([...messages, userMessage]);
       //TODO Move to env var CHAT_API_URL
-      const response = await fetch('https://human-ai-latest.onrender.com/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: input
+      try {
+        const response = await fetch('https://human-ai-latest.onrender.com/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            message: input
+          })
         })
-      })
-      const data = await response.json();
-      if (data.data.role === 'agent' && !!data.data.content) {
-        setMessages([
-          ...messages,
-          userMessage,
-          { id: uuid(), role: 'agent', content: data.data.content }
-        ]);
-        setTimeout(() => {
-          const message = document.getElementById(userId);
-          if (message) {
-            message.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 1000);
+        const data = await response.json();
+        if (data.data.role === 'agent' && !!data.data.content) {
+          setMessages([
+            ...messages,
+            userMessage,
+            { id: uuid(), role: 'agent', content: data.data.content }
+          ]);
+          setTimeout(() => {
+            const message = document.getElementById(userId);
+            if (message) {
+              message.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 1000);
+        }
+      } catch (error) {
+        setIsLoading(false);
+        throw error;
+      } finally {
+        setIsLoading(false);
       }
     }
   };
@@ -130,6 +139,22 @@ export default function Intro() {
             </div>
           </motion.div>
         ))}
+        {isLoading && (
+          <motion.div
+            className="flex justify-start"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <div className="relative text-left bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-2xl p-4 shadow-lg mt-6 max-w-[85%] rounded-tl-none">
+              <div className="relative z-10 text-gray-900 dark:text-white">
+                <span className="inline-block animate-pulse">Thinking</span>
+                <span className="inline-block animate-bounce delay-100">.</span>
+                <span className="inline-block animate-bounce delay-200">.</span>
+                <span className="inline-block animate-bounce delay-300">.</span>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </div>
 
       <motion.div
@@ -156,7 +181,7 @@ export default function Intro() {
             </button>
           </form>
           <p className="text-center text-xs text-gray-600 dark:text-white/40 mt-2">
-            RAG-based chatbot powered by Llama, HuggingFace, Pinecone, Python, FastAPI, & LangChain
+            RAG-based chatbot powered by Groq, Llama, HuggingFace, Pinecone, Python, FastAPI, LangChain + LangSmith
           </p>
         </div>
       </motion.div>
