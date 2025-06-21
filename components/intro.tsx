@@ -8,6 +8,7 @@ import { Loader } from "./loader";
 import { ChatMessages } from "./chat-messages";
 import { ChatForm } from "./chat-form";
 import { ProjectLink } from "./project-link";
+import { ChatError } from "./chat-error";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -41,6 +42,7 @@ export default function Intro() {
         {loading && (
           <Loader />
         )}
+        <ChatError error={error} />
       </div>
 
       <ChatForm handleSubmit={handleSubmit} />
