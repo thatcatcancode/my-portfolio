@@ -1,71 +1,27 @@
 "use client";
 
-import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { v4 as uuid } from 'uuid';
 import { BsArrow90DegRight } from "react-icons/bs";
-import { useSectionInView } from "@/lib/hooks";
+import { useChat, useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import profileImg from "@/public/profile.jpeg";
-
-type Message = {
-  role: 'user' | 'agent';
-  content: string;
-  id: string;
-}
+import { Greeting } from "./greeting";
+import { Loader } from "./loader";
+import { ChatMessages } from "./chat-messages";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const { messages, loading, error, sendChat } = useChat();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const input = formData.get('message') as string;
+    e.currentTarget.reset();
 
-    if (input.trim()) {
-      setIsLoading(true);
-      console.log("User input:", input);
-      e.currentTarget.reset();
-      const userId = uuid();
-      const userMessage: Message = { role: 'user', content: input, id: userId }
-      setMessages([...messages, userMessage]);
-      //TODO Move to env var CHAT_API_URL
-      try {
-        const response = await fetch('https://human-ai-latest.onrender.com/chat', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            message: input
-          })
-        })
-        const data = await response.json();
-        if (data.data.role === 'agent' && !!data.data.content) {
-          setMessages([
-            ...messages,
-            userMessage,
-            { id: uuid(), role: 'agent', content: data.data.content }
-          ]);
-          setTimeout(() => {
-            const message = document.getElementById(userId);
-            if (message) {
-              message.scrollIntoView({ behavior: 'smooth' });
-            }
-          }, 1000);
-        }
-      } catch (error) {
-        setIsLoading(false);
-        throw error;
-      } finally {
-        setIsLoading(false);
-      }
-    }
+    await sendChat(input);
   };
 
   return (
@@ -74,86 +30,12 @@ export default function Intro() {
       id="home"
       className="mb-28 max-w-[50rem] mx-auto text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex items-start justify-center gap-4 pr-2">
-        <div className="relative flex-shrink-0">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
-          >
-            <Image
-              src={profileImg}
-              alt="Lee portrait"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="h-16 w-16 rounded-full object-cover border-[1px] border-white shadow-xl"
-            />
-          </motion.div>
-        </div>
-
-        <motion.div
-          className="relative text-left bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-tl-none rounded-2xl p-4 shadow-lg mt-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          <motion.h1
-            className="text-xl sm:text-2xl font-medium !leading-[1.5] text-gray-900 dark:text-white"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <span className="font-bold">Hello! I'm Leila, </span> a {" "}
-            <span className="font-bold">full-stack engineer</span> with a focus on {" "}
-            <span className="font-bold">AI-powered solutions</span>. I enjoy building {" "}
-            <span className="italic">intelligent</span>, <span className="italic">data-driven</span> {" "}
-            systems that <span className="underline">personalize</span> user experience and drive {" "}
-            <span className="underline">business growth</span>.
-          </motion.h1>
-        </motion.div>
-      </div>
+      <Greeting />
 
       <div className="flex flex-col mx-auto">
-        {messages.map((message, index) => (
-          <motion.div
-            key={message.id}
-            id={message.id}
-            className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 * index }}
-          >
-            <div className={`relative text-left bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-2xl p-4 shadow-lg mt-6 max-w-[85%] ${message.role === 'agent' ? 'rounded-tl-none' : 'rounded-tr-none'}`}>
-              <div className="relative z-10 text-gray-900 dark:text-white">
-                {message.content}
-                {message.role === 'agent' && (
-                  <div className="text-[10px] text-gray-500 dark:text-gray-400 mt-2 text-right">
-                    ✨ Message generated by Leila's AI assistant ✨
-                  </div>
-                )}
-              </div>
-            </div>
-          </motion.div>
-        ))}
-        {isLoading && (
-          <motion.div
-            className="flex justify-start"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <div className="relative text-left bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-2xl p-4 shadow-lg mt-6 max-w-[85%] rounded-tl-none">
-              <div className="relative z-10 text-gray-900 dark:text-white">
-                <span className="inline-block animate-pulse">Thinking</span>
-                <span className="inline-block animate-bounce delay-100">.</span>
-                <span className="inline-block animate-bounce delay-200">.</span>
-                <span className="inline-block animate-bounce delay-300">.</span>
-              </div>
-            </div>
-          </motion.div>
+        <ChatMessages messages={messages} />
+        {loading && (
+          <Loader />
         )}
       </div>
 

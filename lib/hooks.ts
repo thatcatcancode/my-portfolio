@@ -1,7 +1,8 @@
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import type { SectionName } from "./types";
+import type { ChatMessage, SectionName } from "./types";
+import { v4 as uuid } from 'uuid';
 
 export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
   const { ref, inView } = useInView({
@@ -18,4 +19,57 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
   return {
     ref,
   };
+}
+
+export function useChat() {
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<unknown | null>(null);
+  const sendChat = useCallback(async (input: string) => {
+    if (!input.trim()) return;
+    setLoading(true);
+    console.log("User input:", input);
+    const userId = uuid();
+    const userMessage: ChatMessage = { role: 'user', content: input, id: userId }
+    setMessages([...messages, userMessage]);
+    //TODO Move to env var CHAT_API_URL
+    try {
+      const response = await fetch('https://human-ai-latest.onrender.com/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: input
+        })
+      })
+      const data = await response.json();
+      if (data.data.role === 'agent' && !!data.data.content) {
+        setMessages([
+          ...messages,
+          userMessage,
+          { id: uuid(), role: 'agent', content: data.data.content }
+        ]);
+        setTimeout(() => {
+          const message = document.getElementById(userId);
+          if (message) {
+            message.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 1000);
+      }
+    } catch (error) {
+      setLoading(false);
+      setError(error);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  }, [])
+
+  return {
+    sendChat,
+    messages,
+    loading,
+    error
+  }
 }
