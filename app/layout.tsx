@@ -6,12 +6,13 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import WordsContextProvider from "@/context/words-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Leila 'Lee' Adams | Portfolio",
-  description: "Leila (lee-la) is a full-stack developer with 10+ years of experience.",
+  description: "Leila (lee-la) is a full-stack developer with 15+ years of experience.",
 };
 
 export default function RootLayout({
@@ -29,12 +30,14 @@ export default function RootLayout({
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
-            {children}
-            <Footer />
+            <WordsContextProvider>
+              <Header />
+              {children}
+              <Footer />
 
-            <Toaster position="top-right" />
-            <ThemeSwitch />
+              <Toaster position="top-right" />
+              <ThemeSwitch />
+            </WordsContextProvider>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>

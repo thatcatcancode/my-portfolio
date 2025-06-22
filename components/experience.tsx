@@ -10,6 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { HighlightText } from "./highlight-text";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
@@ -43,10 +44,20 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
+              <h3 className="font-semibold capitalize">
+                <HighlightText>
+                  {item.title}
+                </HighlightText>
+              </h3>
+              <p className="font-normal !mt-0">
+                <HighlightText>
+                  {item.location}
+                </HighlightText>
+              </p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
+                <HighlightText>
+                  {item.description}
+                </HighlightText>
               </p>
             </VerticalTimelineElement>
           </React.Fragment>

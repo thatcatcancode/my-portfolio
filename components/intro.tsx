@@ -9,18 +9,28 @@ import { ChatMessages } from "./chat-messages";
 import { ChatForm } from "./chat-form";
 import { ProjectLink } from "./project-link";
 import { ChatError } from "./chat-error";
+import { useWordsContext } from "@/context/words-context";
 
 export default function Intro() {
+  const { words, highlightWords } = useWordsContext();
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { messages, loading, error, sendChat } = useChat();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
+    // Get the form value
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const input = formData.get('message') as string;
+
+    // Update the global words context
+    highlightWords(input);
+
+    // Reset the form
     e.currentTarget.reset();
 
+    // Call the api
     await sendChat(input);
   };
 

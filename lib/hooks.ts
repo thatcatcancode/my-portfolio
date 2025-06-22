@@ -28,7 +28,6 @@ export function useChat() {
   const sendChat = useCallback(async (input: string) => {
     if (!input.trim()) return;
     setLoading(true);
-    console.log("User input:", input);
     const userId = uuid();
     const userMessage: ChatMessage = { role: 'user', content: input, id: userId }
     setMessages([...messages, userMessage]);

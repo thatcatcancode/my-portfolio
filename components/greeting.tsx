@@ -4,6 +4,7 @@ import React from 'react';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import profileImg from "@/public/profile.jpeg";
+import { HighlightText } from './highlight-text';
 
 export const Greeting = () => {
     return (
@@ -42,7 +43,7 @@ export const Greeting = () => {
                         animate={{ opacity: 1, y: 0 }}
                     >
                         <span className="font-bold">Hello! I'm Leila, </span> a {" "}
-                        <span className="font-bold">full-stack engineer</span> with a focus on {" "}
+                        <span className="font-bold"><HighlightText>full-stack engineer</HighlightText></span> with a focus on {" "}
                         <span className="font-bold">AI-powered solutions</span>. I enjoy building {" "}
                         <span className="italic">intelligent</span>, <span className="italic">data-driven</span> {" "}
                         systems that <span className="underline">personalize</span> user experience and drive {" "}

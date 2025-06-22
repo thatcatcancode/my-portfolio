@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { HighlightText } from "./highlight-text";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -46,9 +47,15 @@ export default function Project({
 
         {/* Content container */}
         <div className="p-5 sm:p-8">
-          <h3 className="text-2xl font-semibold">{title}</h3>
+          <h3 className="text-2xl font-semibold">
+            <HighlightText>
+              {title}
+            </HighlightText>
+          </h3>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
+            <HighlightText>
+              {description}
+            </HighlightText>
           </p>
           <ul className="flex flex-wrap mt-4 gap-2">
             {tags.map((tag, index) => (
@@ -56,7 +63,9 @@ export default function Project({
                 className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
                 key={index}
               >
-                {tag}
+                <HighlightText>
+                  {tag}
+                </HighlightText>
               </li>
             ))}
           </ul>
