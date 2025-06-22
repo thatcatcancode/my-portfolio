@@ -9,13 +9,13 @@ type WordsContextType = {
 
 const WordsContext = createContext<WordsContextType | null>(null);
 
-const STOP_WORDS = [
-    "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "of", "with", "by",
+const STOP_WORDS = new Set([
+    "the", "a", "all", "an", "and", "or", "but", "in", "on", "at", "to", "for", "of", "with", "by",
     "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "do", "does", "did",
-    "will", "would", "could", "should", "may", "might", "must", "can", "this", "that", "these", "those",
+    "will", "would", "could", "should", "may", "might", "more", "must", "can", "this", "that", "these", "those",
     "i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them",
     "my", "your", "his", "her", "its", "our", "their", "mine", "yours", "hers", "ours", "theirs"
-]
+])
 
 export default function WordsContextProvider({ children }: { children: React.ReactNode }) {
     const [words, setWords] = useState<string[]>([])
@@ -24,8 +24,9 @@ export default function WordsContextProvider({ children }: { children: React.Rea
         setWords((prev) => [
             ...prev,
             ...input.split(' ')
+                .map(word => word.replace(/[^\w]/g, ''))
                 .map(word => word.toLowerCase())
-                .filter(word => word.length > 2 && !STOP_WORDS.includes(word))]);
+                .filter(word => word.length > 2 && !STOP_WORDS.has(word))]);
     }
 
     return (

@@ -10,10 +10,10 @@ export const HighlightText = ({ children }: { children: string }) => {
     // Split text and wrap keywords
     const regex = new RegExp(`\\b(${words.join("|")})\\b`, "gi");
     const parts = children.split(regex);
-
+    const wordSet = new Set(words)
     return (
         <>
-            {parts.map((part, i) => words.includes(part.toLowerCase()) ?
+            {parts.map((part, i) => part && wordSet.has(part.toLowerCase()) ?
                 (
                     <mark key={i} className="bg-yellow-200 dark:bg-yellow-600 rounded px-1">{part}</mark>
                 ) : (part))
