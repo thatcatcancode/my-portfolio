@@ -23,7 +23,10 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
-      <Timeline lineColor="">
+      <Timeline 
+        lineColor=""
+        className="[&_.vertical-timeline-element]:!transform-none [&_.vertical-timeline-element]:!transition-none [&_.vertical-timeline-element]:!animate-none"
+      >
         {experiencesData.map((item) => (
           <TimelineElement
             key={item.id}
@@ -34,6 +37,9 @@ export default function Experience() {
               border: "1px solid rgba(0, 0, 0, 0.05)",
               textAlign: "left",
               padding: "1.3rem 2rem",
+              transform: "none !important",
+              transition: "none !important",
+              animation: "none !important",
             }}
             contentArrowStyle={{
               borderRight:
@@ -47,6 +53,9 @@ export default function Experience() {
               background:
                 theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
               fontSize: "1.5rem",
+              transform: "none !important",
+              transition: "none !important",
+              animation: "none !important",
             }}
           >
             <h3 className="font-semibold capitalize">

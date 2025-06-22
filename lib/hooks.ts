@@ -28,9 +28,16 @@ export function useChat() {
   const sendChat = useCallback(async (input: string) => {
     if (!input.trim()) return;
     setLoading(true);
+    setError(null);
     const userId = uuid();
     const userMessage: ChatMessage = { role: 'user', content: input, id: userId }
-    setMessages([...messages, userMessage]);
+    setMessages((prev) => [...prev, userMessage]);
+    setTimeout(() => {
+      const message = document.getElementById(userId);
+      if (message) {
+        message.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 250);
     //TODO Move to env var CHAT_API_URL
     try {
       const response = await fetch('https://human-ai-latest.onrender.com/chat', {
@@ -44,17 +51,10 @@ export function useChat() {
       })
       const data = await response.json();
       if (data.data.role === 'agent' && !!data.data.content) {
-        setMessages([
-          ...messages,
-          userMessage,
+        setMessages((prev) => [
+          ...prev,
           { id: uuid(), role: 'agent', content: data.data.content }
         ]);
-        setTimeout(() => {
-          const message = document.getElementById(userId);
-          if (message) {
-            message.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 1000);
       }
     } catch (error) {
       setLoading(false);
