@@ -26,7 +26,7 @@ export default function WordsContextProvider({ children }: { children: React.Rea
             ...input.split(' ')
                 .map(word => word.replace(/[^\w]/g, ''))
                 .map(word => word.toLowerCase())
-                .filter(word => word.length > 2 && !STOP_WORDS.has(word))]);
+                .filter(word => word.length > 1 && !STOP_WORDS.has(word))]);
     }
 
     return (

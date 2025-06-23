@@ -1,7 +1,7 @@
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useCallback, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import type { ChatMessage, SectionName } from "./types";
+import { isAgentMessage, type ChatMessage, type SectionName } from "./types";
 import { v4 as uuid } from 'uuid';
 
 export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
@@ -49,8 +49,13 @@ export function useChat() {
           message: input
         })
       })
+
+      if (!response.ok) {
+        throw new Error('Response failed')
+      }
+
       const data = await response.json();
-      if (data.data.role === 'agent' && !!data.data.content) {
+      if (isAgentMessage(data.data)) {
         setMessages((prev) => [
           ...prev,
           { id: uuid(), role: 'agent', content: data.data.content }
@@ -59,7 +64,6 @@ export function useChat() {
     } catch (error) {
       setLoading(false);
       setError(error);
-      throw error;
     } finally {
       setLoading(false);
     }

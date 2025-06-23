@@ -180,6 +180,7 @@ export const skillsData = [
   "OpenAI",
   "Ollama",
   "Hugging Face",
+  "Transformers",
   "GenAI",
   "LangChain",
   "RAG",
@@ -215,6 +216,8 @@ export const skillsData = [
   "Discoverability",
   "Monitoring & Alerting",
   "DX",
+  "AWS",
+  "GCP",
 ] as const;
 
 export const articleData = [
